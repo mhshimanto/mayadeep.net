@@ -22,11 +22,37 @@
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
-    <!-- Theme Style -->
+    <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+    <!--FB Messenger Starts-->
+
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v10.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="135615383611282"
+      logged_in_greeting="হ্যালো, যেকোনো তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন :) "
+      logged_out_greeting="হ্যালো, যেকোনো তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন :) ">
+    </div>
+    <!--FB Messenger END-->
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center">
@@ -621,5 +647,6 @@
     
 
     <script src="js/main.js"></script>
+    
   </body>
 </html>
